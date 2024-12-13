@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Gift Planner</div>
+        <nav class="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="../favorites/favorites.html">Favorites</a>
+            <a href="../occasion/occasion.html">Occasion</a>
+            <a href=..>Profile</a>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <main class="profile-main">
+        <div class="profile-header">
+            <div class="profile-image">
+                <img src="../img/IMG_0443.JPG" alt="User Profile Picture">
+            </div>
+            <div class="profile-info">
+                <h1>Lily Diaz 🖤</h1>
+                <p>------------------------------------------</p>
+                <p>Artist | Art connoisseur  | Matcha Lover</p>
+                <p>                         </p>
+                <p>Email: lily.diaz@gmail.com</p>
+               <p>Location: Kyiv, Ukraine</p>
+                <p>Joined: January 2021</p>
+            </div>
+        </div>
+
+      
+        <style>
+            .profile-tabs {
+                display: flex;
+                gap: 15px;
+               
+            }
+            .tab-button {
+                padding: 10px;
+                background-color: #6a0dad;
+                border: 1px solid #ccc;
+                cursor: pointer;
+                text-align: left;
+                font-size: 16px;
+                position: relative;
+            }
+            .dropdown-menu {
+                border: 1px solid #ccc;
+                padding: 5px;
+                margin-top: 5px;
+                display: none;
+                flex-direction: column;
+                gap: 5px;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                background-color: white;
+                width: 100%;
+                z-index: 1;
+            }
+            .tab-button.active .dropdown-menu {
+                display: flex;
+            }
+            .dropdown-item {
+                padding: 8px;
+                text-decoration: none;
+                color: #333;
+                background-color: #fff;
+                display: block;
+            }
+            .dropdown-item:hover {
+                background-color: #e7e7e7;
+            }
+            .dropdown-item.active {
+                background-color: #007bff;
+                color: #fff;
+            }
+        </style>
+        <script>
+            function toggleDropdown(button) {
+                button.classList.toggle("active");
+            }
+        </script>
+  
+
+    
+    <div class="profile-tabs">
+        <button class="tab-button" onclick="toggleDropdown(this)">
+            My Holidays
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">New Year Celebration</a>
+                <a class="dropdown-item active" href="#">Summer Vacation</a>
+                <a class="dropdown-item" href="#">Birthday Celebration</a>
+            </div>
+        </button>
+    
+        <button class="tab-button" onclick="toggleDropdown(this)">
+            Languages
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item active" href="#">Ukrainian</a>
+                <a class="dropdown-item" href="#">Polish</a>
+            </div>
+        </button>
+    
+        <button class="tab-button" onclick="toggleDropdown(this)">
+            Personal Information
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Contact Details</a>
+                <a class="dropdown-item active" href="#">Address</a>
+                <a class="dropdown-item" href="#">Preferences</a>
+            </div>
+        </button>
+    </div>
+    
+   
+        <!-- Calendar Section -->
+        <div id="calendar-section">
+            <div class="calendar-month">
+                <h2>December 2024</h2>
+                <div class="calendar-grid">
+                    <div class="day-name">Su</div><div class="day-name">Mo</div><div class="day-name">Tu</div><div class="day-name">We</div><div class="day-name">Th</div><div class="day-name">Fr</div><div class="day-name">Sa</div>
+                    <!-- Days for November -->
+                    <div class="day"></div><div class="day"></div><div class="day">1</div><div class="day">2</div>
+                    <div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div>
+                    <div class="day">10</div><div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div>
+                    <div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div>
+                    <div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Gift Planner - All Rights Reserved
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+</html>
